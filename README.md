@@ -1,9 +1,16 @@
+# TRON1 RL Isaac Gym
+
+Reinforcement learning framework for training legged robots (bipedal locomotion) using PPO with NVIDIA Isaac Gym. Supports multiple robot morphologies: **PointFoot** (PF), **SoleFoot** (SF), and **WheelFoot** (WF).
+
+**Supported robot types:** `PF_TRON1A`, `PF_P441A`, `PF_P441B`, `PF_P441C`, `PF_P441C2`, `SF_TRON1A`, `WF_TRON1A`
+
+---
+
 ### Installation ###
 1. Create a new python virtual env with python 3.6, 3.7 or 3.8 (3.8 recommended)
     - `conda create -n your_virtual_env python=3.8`
     - `conda activate your_virtual_env`
-    - `pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121`
-2. Install pytorch 1.10 with cuda-12.1:
+2. Install pytorch 2.2.2 with cuda-12.1:
     - `pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121`
 3. Install Isaac Gym
    - Download and install Isaac Gym Preview 3 (Preview 2 will not work!) from https://developer.nvidia.com/isaac-gym
