@@ -2,17 +2,16 @@
 1. Create a new python virtual env with python 3.6, 3.7 or 3.8 (3.8 recommended)
     - `conda create -n your_virtual_env python=3.8`
     - `conda activate your_virtual_env`
-    - `pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121`
-2. Install pytorch 1.10 with cuda-12.1:
+2. Install PyTorch 2.2.2 with cuda-12.1:
     - `pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121`
 3. Install Isaac Gym
-   - Download and install Isaac Gym Preview 3 (Preview 2 will not work!) from https://developer.nvidia.com/isaac-gym
+   - Download and install Isaac Gym Preview 4 from https://developer.nvidia.com/isaac-gym
    - `cd isaacgym/python && pip install -e .`
    - Try running an example `cd examples && python 1080_balls_of_solitude.py`
    - For troubleshooting check docs `isaacgym/docs/index.html`) 
 4. Install legged_gym
     - Clone this repository
-   - `cd legged_gym && pip install -e .`
+   - `cd tron1-rl-isaacgym && pip install -e .`
 
 ### CODE STRUCTURE ###
 1. Each environment is defined by an env file `pointfoot_flat.py` and a config file `pointfoot_flat_config.py`(take pointfoot for example). The config file contains two classes: one conatianing all the environment parameters (`BipedCfgPF`) and one for the training parameters (`BipedCfgPPOPF`).  
