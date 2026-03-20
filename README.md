@@ -1,9 +1,12 @@
+# TRON1 RL Isaac Gym
+
+Reinforcement learning environments for legged robots (Pointfoot, Solefoot, and Wheelfoot) using NVIDIA Isaac Gym. Built on top of [legged_gym](https://github.com/leggedrobotics/legged_gym) from ETH Zurich's Robotic Systems Lab.
+
 ### Installation ###
 1. Create a new python virtual env with python 3.6, 3.7 or 3.8 (3.8 recommended)
     - `conda create -n your_virtual_env python=3.8`
     - `conda activate your_virtual_env`
-    - `pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121`
-2. Install pytorch 1.10 with cuda-12.1:
+2. Install pytorch 2.2.2 with cuda-12.1:
     - `pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121`
 3. Install Isaac Gym
    - Download and install Isaac Gym Preview 3 (Preview 2 will not work!) from https://developer.nvidia.com/isaac-gym
@@ -21,6 +24,12 @@
 4. Tasks must be registered using `task_registry.register(name, EnvClass, EnvConfig, TrainConfig)`. This is done in `envs/__init__.py`, but can also be done from outside of this repository.  
 
 ### Usage ###
+
+Supported `ROBOT_TYPE` values:
+- **Pointfoot**: `PF_TRON1A`, `PF_P441A`, `PF_P441B`, `PF_P441C`, `PF_P441C2`
+- **Solefoot**: `SF_TRON1A`
+- **Wheelfoot**: `WF_TRON1A`
+
 1. Train(take pointfoot for example):
 
     ```export ROBOT_TYPE=PF_TRON1A```
